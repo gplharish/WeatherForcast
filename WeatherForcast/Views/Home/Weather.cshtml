@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WeatherForcast.Models.consolidated_weather>
+
+@{
+    ViewBag.Title = "Weather";
+}
+
+<h2>Next 5 Days weather Forecast for Belfast</h2>
+
+<table class="table">
+    @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.applicable_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.weather_state_name)
+        </td>
+        <td>
+            <img src="https://www.metaweather.com/static/img/weather/@(item.weather_state_abbr).svg" alt="light rain" style="width:32px;">
+        </td>
+    </tr>
+}
+
+</table>

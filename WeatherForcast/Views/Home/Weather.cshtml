@@ -16,7 +16,7 @@
             @Html.DisplayFor(modelItem => item.weather_state_name)
         </td>
         <td>
-            <img src="https://www.metaweather.com/static/img/weather/@(item.weather_state_abbr).svg" alt="light rain" style="width:32px;">
+            <img src="https://www.metaweather.com/static/img/weather/@(item.weather_state_abbr).svg" alt="@item.weather_state_name" style="width:32px;">
         </td>
     </tr>
 }
